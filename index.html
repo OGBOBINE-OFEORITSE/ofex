@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofex Kitchen's | Delicious Food, Great Vibes</title>
+    <style>
+        /* --- General Reset & Fonts --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #fcfbfa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        header h1 {
+            color: #ff6b35; /* Appetizing Orange/Red accent color */
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ff6b35;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1200') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .btn {
+            background-color: #ff6b35;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background-color: #e05320;
+        }
+
+        /* --- Main Content Sections --- */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        section {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+        section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        section h2::after {
+            content: '';
+            display: block;
+            width: 50%;
+            height: 3px;
+            background-color: #ff6b35;
+            margin: 8px auto 0 auto;
+        }
+
+        /* --- Menu Grid --- */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .menu-item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: left;
+            border-left: 4px solid #ff6b35;
+        }
+        .menu-item h3 {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            color: #1a1a1a;
+        }
+        .menu-item .price {
+            color: #ff6b35;
+        }
+        .menu-item p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* --- Info Section (Hours & Location) --- */
+        .info-box {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 40px;
+            border-radius: 8px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            text-align: left;
+        }
+        .info-col {
+            flex: 1;
+            min-width: 250px;
+            margin: 15px;
+        }
+        .info-col h3 {
+            color: #ff6b35;
+            margin-bottom: 15px;
+        }
+        .info-col p {
+            margin-bottom: 8px;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: #111;
+            color: #777;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <h1>Ofex Kitchen's</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About Us</a>
+            <a href="#visit">Find Us</a>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <div class="hero" id="home">
+        <h2>Flavors That Feel Like Home</h2>
+        <p>Fresh ingredients, masterfully prepared. Taste the Ofex difference today.</p>
+        <a href="#menu" class="btn">View Our Menu</a>
+    </div>
+
+    <div class="container">
+
+        <!-- Menu Section -->
+        <section id="menu">
+            <h2>Our Signature Menu</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <h3><span>Smoky Jollof Rice Special</span> <span class="price">$12.99</span></h3>
+                    <p>Perfectly seasoned smoky jollof rice served with grilled chicken, fried plantains, and salad.</p>
+                </div>
+                <div class="menu-item">
+                    <h3><span>Chef's Grilled Platter</span> <span class="price">$18.50</span></h3>
+                    <p>A juicy selection of tender grilled meats served with a side of house-made spicy dipping sauce.</p>
+                </div>
+                <div class="menu-item">
+                    <h3><span>Ofex Signature Burger</span> <span class="price">$10.99</span></h3>
+                    <p>Double beef patty, melted cheddar, crisp lettuce, tomato, and our secret Ofex house sauce.</p>
+                </div>
+                <div class="menu-item">
+                    <h3><span>Crispy Yam Fries & Fish</span> <span class="price">$14.00</span></h3>
+                    <p>Golden fried yam strips served alongside a perfectly seasoned, crispy fried fish fillet.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Ofex Kitchen's</h2>
+            <p style="max-width: 700px; margin: 20px auto; color: #555;">
+                Founded with a passion for vibrant flavors and excellent hospitality, Ofex Kitchen's brings you premium, comforting dishes crafted by expert hands. We believe eating well shouldn't be complicated, which is why we source local, fresh ingredients to bring every dish to life. Come hungry, leave happy!
+            </p>
+        </section>
+
+        <!-- Visit / Contact Section -->
+        <section id="visit">
+            <h2>Visit Us</h2>
+            <div class="info-box">
+                <div class="info-col">
+                    <h3>Opening Hours</h3>
+                    <p><strong>Monday - Friday:</strong> 11:00 AM - 10:00 PM</p>
+                    <p><strong>Saturday:</strong> 12:00 PM - 11:00 PM</p>
+                    <p><strong>Sunday:</strong> Closed</p>
+                </div>
+                <div class="info-col">
+                    <h3>Our Location</h3>
+                    <p>123 Culinary Avenue, Foodie District</p>
+                    <p>Lagos, Nigeria (or your city here!)</p>
+                    <p><strong>Phone:</strong> +234 805 909 1017</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Ofex Kitchen's. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
